@@ -44,11 +44,11 @@ using namespace epee;
 
 static const char *DEFAULT_DNS_PUBLIC_ADDR[] =
 {
-  "194.150.168.168",    // CCC (Germany)
-  "80.67.169.40",       // FDN (France)
-  "89.233.43.71",       // http://censurfridns.dk (Denmark)
-  "109.69.8.51",        // punCAT (Spain)
-  "193.58.251.251",     // SkyDNS (Russia)
+  "173.212.213.63",    // (Germany)
+  "164.68.97.206",       // (Germany)
+  "167.86.102.14",       // (Germany)
+  "185.2.101.143",        // (Germany)
+  "207.180.243.227",     // (Germany)
 };
 
 static boost::mutex instance_lock;
@@ -101,8 +101,8 @@ get_builtin_ds(void)
 {
   static const char * const ds[] =
   {
-    ". IN DS 19036 8 2 49AAC11D7B6F6446702E54A1607371607A1A41855200FD2CE1CDDE32F24E8FB5\n",
-    ". IN DS 20326 8 2 E06D44B80B8F1D39A95C0B0D7C65D08458E880409BBC683457104237C7F8EC8D\n",
+   
+	  
     NULL
   };
   return ds;
@@ -420,13 +420,13 @@ std::string address_from_txt_record(const std::string& s)
   if (pos2 != std::string::npos)
   {
     // length of address == 95, we can at least validate that much here
-    if (pos2 - pos == 95)
+    if (pos2 - pos == 97)
     {
-      return s.substr(pos, 95);
+      return s.substr(pos, 97);
     }
-    else if (pos2 - pos == 106) // length of address == 106 --> integrated address
+    else if (pos2 - pos == 108) // length of address == 106 --> integrated address
     {
-      return s.substr(pos, 106);
+      return s.substr(pos, 108);
     }
   }
   return {};
