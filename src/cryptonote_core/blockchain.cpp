@@ -365,9 +365,9 @@ bool Blockchain::init(BlockchainDB* db, const network_type nettype, bool offline
   uint64_t top_block_timestamp = m_db->get_top_block_timestamp();
   uint64_t timestamp_diff = time(NULL) - top_block_timestamp;
 
-  // genesis block has no timestamp, could probably change it to have timestamp of 1397818133...
+  // genesis block has no timestamp, could probably change it to have timestamp of 1573818533 11-15-2019 06:48:53...
   if(!top_block_timestamp)
-    timestamp_diff = time(NULL) - 1397818133;
+    timestamp_diff = time(NULL) - 1573818533;
 
   // create general purpose async service queue
 
@@ -836,6 +836,9 @@ difficulty_type Blockchain::get_difficulty_for_next_block()
   uint64_t height;
   top_hash = get_tail_id(height); // get it again now that we have the lock
   ++height; // top block height to blockchain height
+    
+  uint8_t version = get_current_hard_fork_version();
+  uint64_t difficulty_blocks_count = version >= 11 ? DIFFICULTY_BLOCKS_COUNT_V3 : version <= 10 && version >= 8 ? DIFFICULTY_BLOCKS_COUNT_V2 : DIFFICULTY_BLOCKS_COUNT;
   // ND: Speedup
   // 1. Keep a list of the last 735 (or less) blocks that is used to compute difficulty,
   //    then when the next block difficulty is queried, push the latest height data and
@@ -880,7 +883,25 @@ difficulty_type Blockchain::get_difficulty_for_next_block()
     m_difficulties = difficulties;
   }
   size_t target = get_difficulty_target();
+  uint64_t T = DIFFICULTY_TARGET_V2;
+  uint64_t N = DIFFICULTY_WINDOW_V3;
+  uint64_t HEIGHT = m_db->height();
+  uint64_t FORK_HEIGHT = DIFFICULTY_FORK_HEIGHT;
+  uint64_t difficulty_guess = DIFFICULTY_RESET;
+
   difficulty_type diff = next_difficulty(timestamps, difficulties, target);
+
+    if (version >= 11) {
+    diff = next_difficulty_v5(timestamps, difficulties, T, N, HEIGHT, FORK_HEIGHT, difficulty_guess);
+  } else if (version == 10) {
+    diff = next_difficulty_v4(timestamps, difficulties, height);
+  } else if (version == 9) {
+    diff = next_difficulty_v3(timestamps, difficulties);
+  } else if (version == 8) {
+    diff = next_difficulty_v2(timestamps, difficulties, target);
+  } else {
+    diff = next_difficulty(timestamps, difficulties, target);
+  }
 
   CRITICAL_REGION_LOCAL1(m_difficulty_lock);
   m_difficulty_for_next_block_top_hash = top_hash;
