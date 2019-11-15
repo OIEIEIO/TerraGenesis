@@ -1,6 +1,6 @@
 # MonetaVerde
 
-Copyright (c) 2019-2020 MoentaVerde.  
+Copyright (c) 2019-2020 MonetaVerde.  
 Copyright (c) 2014-2019 The Monero Project.   
 Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
@@ -30,12 +30,6 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 ## Development resources
 
-- Web: [getmonero.org](https://getmonero.org)
-- Forum: [forum.getmonero.org](https://forum.getmonero.org)
-- Mail: [dev@getmonero.org](mailto:dev@getmonero.org)
-- GitHub: [https://github.com/monero-project/monero](https://github.com/monero-project/monero)
-- IRC: [#monero-dev on Freenode](https://webchat.freenode.net/?randomnick=1&channels=%23monero-dev&prompt=1&uio=d4)
-
 ## Vulnerability response
 
 - Our [Vulnerability Response Process](https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
@@ -55,30 +49,10 @@ Our researchers are available on IRC in [#monero-research-lab on Freenode](https
 - You can subscribe to an [announcement listserv](https://lists.getmonero.org) to get critical announcements from the Monero core team. The announcement list can be very helpful for knowing when software updates are needed.
 
 ## Translations
-The CLI wallet is available in different languages. If you want to help translate it, see our self-hosted localization platform, Weblate, on [translate.getmonero.org](https://translate.getmonero.org/projects/CLI/). Every translation *must* be uploaded on the platform, pull requests directly editing the code in this repository will be closed. If you need help with Weblate, you can find a guide with screenshots [here](https://github.com/monero-ecosystem/monero-translations/blob/master/weblate.md).
-&nbsp;
-
-If you need help/support/info about translations, contact the localization workgroup. You can find the complete list of contacts on the repository of the workgroup: [monero-translations](https://github.com/monero-ecosystem/monero-translations#contacts).
 
 ## Build Status
 
 ### IMPORTANT
-
-These builds are of the master branch, which is used for active development and can be either unstable or incompatible with release software. Please compile release branches.
-
-| Operating System      | Processor | Status |
-| --------------------- | -------- |--------|
-| Ubuntu 16.04          |  i686    | [![Ubuntu 16.04 i686](https://build.getmonero.org/png?builder=monero-static-ubuntu-i686)](https://build.getmonero.org/builders/monero-static-ubuntu-i686)
-| Ubuntu 16.04          |  amd64   | [![Ubuntu 16.04 amd64](https://build.getmonero.org/png?builder=monero-static-ubuntu-amd64)](https://build.getmonero.org/builders/monero-static-ubuntu-amd64)
-| Ubuntu 16.04          |  armv7   | [![Ubuntu 16.04 armv7](https://build.getmonero.org/png?builder=monero-static-ubuntu-arm7)](https://build.getmonero.org/builders/monero-static-ubuntu-arm7)
-| Debian Stable         |  armv8   | [![Debian armv8](https://build.getmonero.org/png?builder=monero-static-debian-armv8)](https://build.getmonero.org/builders/monero-static-debian-armv8)
-| macOS 10.11             |  amd64   | [![macOS 10.11 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.11)](https://build.getmonero.org/builders/monero-static-osx-10.11)
-| macOS 10.12             |  amd64   | [![macOS 10.12 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.12)](https://build.getmonero.org/builders/monero-static-osx-10.12)
-| macOS 10.13             |  amd64   | [![macOS 10.13 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.13)](https://build.getmonero.org/builders/monero-static-osx-10.13)
-| FreeBSD 11            |  amd64   | [![FreeBSD 11 amd64](https://build.getmonero.org/png?builder=monero-static-freebsd64)](https://build.getmonero.org/builders/monero-static-freebsd64)
-| DragonFly BSD 4.6     |  amd64   | [![DragonFly BSD amd64](https://build.getmonero.org/png?builder=monero-static-dragonflybsd-amd64)](https://build.getmonero.org/builders/monero-static-dragonflybsd-amd64)
-| Windows (MSYS2/MinGW) |  i686    | [![Windows (MSYS2/MinGW) i686](https://build.getmonero.org/png?builder=monero-static-win32)](https://build.getmonero.org/builders/monero-static-win32)
-| Windows (MSYS2/MinGW) |  amd64   | [![Windows (MSYS2/MinGW) amd64](https://build.getmonero.org/png?builder=monero-static-win64)](https://build.getmonero.org/builders/monero-static-win64)
 
 ## Coverage
 
@@ -90,7 +64,7 @@ These builds are of the master branch, which is used for active development and 
 
 ## Introduction
 
-Monero is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
+MonetaVerde is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
 
 **Privacy:** Monero uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions that everyone has). This ensures that your purchases, receipts, and all transfers remain absolutely private by default.
 
