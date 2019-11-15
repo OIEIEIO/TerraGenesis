@@ -21,7 +21,7 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
   - [Contributing](#contributing)
   - [Scheduled software upgrades](#scheduled-software-upgrades)
   - [Release staging schedule and protocol](#release-staging-schedule-and-protocol)
-  - [Compiling Monero from source](#compiling-monero-from-source)
+  - [Compiling MonetaVerde from source](#compiling-monero-from-source)
     - [Dependencies](#dependencies)
   - [Internationalization](#Internationalization)
   - [Using Tor](#using-tor)
@@ -66,29 +66,29 @@ Our researchers are available on IRC in [#monero-research-lab on Freenode](https
 
 MonetaVerde is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
 
-**Privacy:** Monero uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions that everyone has). This ensures that your purchases, receipts, and all transfers remain absolutely private by default.
+**Privacy:** MonetaVerde uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions that everyone has). This ensures that your purchases, receipts, and all transfers remain absolutely private by default.
 
 **Security:** Using the power of a distributed peer-to-peer consensus network, every transaction on the network is cryptographically secured. Individual wallets have a 25 word mnemonic seed that is only displayed once, and can be written down to backup the wallet. Wallet files are encrypted with a passphrase to ensure they are useless if stolen.
 
-**Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Monero is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
+**Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, MonetaVerde is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
 
-**Decentralization:** The utility of monero depends on its decentralised peer-to-peer consensus network - anyone should be able to run the monero software, validate the integrity of the blockchain, and participate in all aspects of the monero network using consumer-grade commodity hardware. Decentralization of the monero network is maintained by software development that minimizes the costs of running the monero software and inhibits the proliferation of specialized, non-commodity hardware.  
+**Decentralization:** The utility of MonetaVerde depends on its decentralised peer-to-peer consensus network - anyone should be able to run the MonetaVerde software, validate the integrity of the blockchain, and participate in all aspects of the MonetaVerde network using consumer-grade commodity hardware. Decentralization of the MonetaVerde network is maintained by software development that minimizes the costs of running the MonetaVerde software and inhibits the proliferation of specialized, non-commodity hardware.  
 
 ## About this project
 
-This is the core implementation of Monero. It is open source and completely free to use without restrictions, except for those specified in the license agreement below. There are no restrictions on anyone creating an alternative implementation of Monero that uses the protocol and network in a compatible manner.
+This is the core implementation of MonetaVerde. It is open source and completely free to use without restrictions, except for those specified in the license agreement below. There are no restrictions on anyone creating an alternative implementation of MonetaVerde that uses the protocol and network in a compatible manner.
 
 As with many development projects, the repository on Github is considered to be the "staging" area for the latest changes. Before changes are merged into that branch on the main repository, they are tested by individual developers in their own branches, submitted as a pull request, and then subsequently tested by contributors who focus on testing and code reviews. That having been said, the repository should be carefully considered before using it in a production environment, unless there is a patch in the repository for a particular show-stopping issue you are experiencing. It is generally a better idea to use a tagged release for stability.
 
-**Anyone is welcome to contribute to Monero's codebase!** If you have a fix or code change, feel free to submit it as a pull request directly to the "master" branch. In cases where the change is relatively small or does not affect other parts of the codebase it may be merged in immediately by any one of the collaborators. On the other hand, if the change is particularly large or complex, it is expected that it will be discussed at length either well in advance of the pull request being submitted, or even directly on the pull request.
+**Anyone is welcome to contribute to MonetaVerde's codebase!** If you have a fix or code change, feel free to submit it as a pull request directly to the "master" branch. In cases where the change is relatively small or does not affect other parts of the codebase it may be merged in immediately by any one of the collaborators. On the other hand, if the change is particularly large or complex, it is expected that it will be discussed at length either well in advance of the pull request being submitted, or even directly on the pull request.
 
 ## Supporting the project
 
-Monero is a 100% community-sponsored endeavor. If you want to join our efforts, the easiest thing you can do is support the project financially. Both Monero and Bitcoin donations can be made to **donate.getmonero.org** if using a client that supports the [OpenAlias](https://openalias.org) standard. Alternatively you can send XMR to the Monero donation address via the `donate` command (type `help` in the command-line wallet for details).
+MonetaVerde is a 100% community-sponsored endeavor. If you want to join our efforts, the easiest thing you can do is support the project financially. Both MonetaVerde and Bitcoin donations can be made to **donate.mcngreen.com** if using a client that supports the [OpenAlias](https://openalias.org) standard. Alternatively you can send XMR to the MonetaVerde donation address via the `donate` command (type `help` in the command-line wallet for details).
 
-The Monero donation address is: `44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A` (viewkey: `f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501`)
+The MonetaVerde donation address is: 
 
-The Bitcoin donation address is: `1KTexdemPdxSBcG55heUuTjDRYqbC5ZL8H`
+The Bitcoin donation address is: 
 
 Core development funding and/or some supporting services are also graciously provided by sponsors:
 
@@ -112,11 +112,11 @@ If you want to help out, see [CONTRIBUTING](CONTRIBUTING.md) for a set of guidel
 
 ## Scheduled software upgrades
 
-Monero uses a fixed-schedule software upgrade (hard fork) mechanism to implement new features. This means that users of Monero (end users and service providers) should run current versions and upgrade their software on a regular schedule. Software upgrades occur during the months of April and October. The required software for these upgrades will be available prior to the scheduled date. Please check the repository prior to this date for the proper Monero software version. Below is the historical schedule and the projected schedule for the next upgrade.
+MonetaVerde uses a fixed-schedule software upgrade (hard fork) mechanism to implement new features. This means that users of MonetaVerde (end users and service providers) should run current versions and upgrade their software on a regular schedule. Software upgrades occur during the months of April and October. The required software for these upgrades will be available prior to the scheduled date. Please check the repository prior to this date for the proper MonetaVerde software version. Below is the historical schedule and the projected schedule for the next upgrade.
 Dates are provided in the format YYYY-MM-DD.
 
 
-| Software upgrade block height  | Date       | Fork version      | Minimum Monero version | Recommended Monero version | Details                                                                            |  
+| Software upgrade block height  | Date       | Fork version      | Minimum MonetaVerde version | Recommended MonetaVerde version | Details                                                                            |  
 | ------------------------------ | -----------| ----------------- | ---------------------- | -------------------------- | ---------------------------------------------------------------------------------- |
 | 1009827                        | 2016-03-22 | v2                | v0.9.4                 | v0.9.4                     | Allow only >= ringsize 3, blocktime = 120 seconds, fee-free blocksize 60 kb       |
 | 1141317                        | 2016-09-21 | v3                | v0.9.4                 | v0.10.0                    | Splits coinbase into denominations  |
@@ -138,7 +138,7 @@ X's indicate that these details have not been determined as of commit date.
 
 Approximately three months prior to a scheduled software upgrade, a branch from master will be created with the new release version tag. Pull requests that address bugs should then be made to both master and the new release branch. Pull requests that require extensive review and testing (generally, optimizations and new features) should *not* be made to the release branch.
 
-## Compiling Monero from source
+## Compiling MonetaVerde from source
 
 ### Dependencies
 
@@ -200,11 +200,11 @@ Clone recursively to pull-in needed submodule(s):
 
 If you already have a repo cloned, initialize and update:
 
-`$ cd monero && git submodule init && git submodule update`
+`$ cd MonetaVerde && git submodule init && git submodule update`
 
 ### Build instructions
 
-Monero uses the CMake build system and a top-level [Makefile](Makefile) that
+MonetaVerde uses the CMake build system and a top-level [Makefile](Makefile) that
 invokes cmake commands as needed.
 
 #### On Linux and macOS
@@ -213,7 +213,7 @@ invokes cmake commands as needed.
 * Change to the root of the source code directory, change to the most recent release branch, and build:
 
     ```bash
-    cd monero
+    cd MonetaVerde
     git checkout release-v0.15
     make
     ```
@@ -227,16 +227,16 @@ invokes cmake commands as needed.
     https://github.com/zeromq/cppzmq to `/usr/local/include` should fix that error.
 
     *Note*: The instructions above will compile the most stable release of the
-    Monero software. If you would like to use and test the most recent software,
+    MonetaVerde software. If you would like to use and test the most recent software,
     use ```git checkout master```. The master branch may contain updates that are
     both unstable and incompatible with release software, though testing is always
     encouraged.
 
 * The resulting executables can be found in `build/release/bin`
 
-* Add `PATH="$PATH:$HOME/monero/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/MonetaVerde/build/release/bin"` to `.profile`
 
-* Run Monero with `monerod --detach`
+* Run MonetaVerde with `monetaverded --detach`
 
 * **Optional**: build and run the test suite to verify the binaries:
 
@@ -272,7 +272,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * `apt-get update && apt-get upgrade` to install all of the latest software
 
-* Install the dependencies for Monero from the 'Debian' column in the table above.
+* Install the dependencies for MonetaVerde from the 'Debian' column in the table above.
 
 * Increase the system swap size:
 
@@ -285,7 +285,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * If using an external hard disk without an external power supply, ensure it gets enough power to avoid hardware issues when syncing, by adding the line "max_usb_current=1" to /boot/config.txt
 
-* Clone monero and checkout the most recent release version:
+* Clone MonetaVerde and checkout the most recent release version:
 
     ```bash
     git clone https://github.com/monero-project/monero.git
@@ -299,7 +299,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
     make release
     ```
 
-* Wait 4-6 hours
+* Wait 30 minutes
 
 * The resulting executables can be found in `build/release/bin`
 
