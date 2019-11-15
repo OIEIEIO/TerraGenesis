@@ -21,7 +21,7 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
   - [Contributing](#contributing)
   - [Scheduled software upgrades](#scheduled-software-upgrades)
   - [Release staging schedule and protocol](#release-staging-schedule-and-protocol)
-  - [Compiling MonetaVerde from source](#compiling-monero-from-source)
+  - [Compiling MonetaVerde from source](#compiling-MonetaVerde-from-source)
     - [Dependencies](#dependencies)
   - [Internationalization](#Internationalization)
   - [Using Tor](#using-tor)
@@ -196,7 +196,7 @@ FreeBSD one liner for required to build dependencies
 
 Clone recursively to pull-in needed submodule(s):
 
-`$ git clone --recursive https://github.com/monero-project/monero`
+`$ git clone --recursive https://github.com/MonetaVerde-project/MonetaVerde`
 
 If you already have a repo cloned, initialize and update:
 
@@ -288,8 +288,8 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 * Clone MonetaVerde and checkout the most recent release version:
 
     ```bash
-    git clone https://github.com/monero-project/monero.git
-    cd monero
+    git clone https://github.com/MonetaVerde-project/MonetaVerde.git
+    cd MonetaVerde
     git checkout tags/v0.15.0.0
     ```
 
@@ -303,15 +303,15 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * The resulting executables can be found in `build/release/bin`
 
-* Add `PATH="$PATH:$HOME/monero/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/MonetaVerde/build/release/bin"` to `.profile`
 
-* Run Monero with `monerod --detach`
+* Run MonetaVerde with `MonetaVerded --detach`
 
 * You may wish to reduce the size of the swap file after the build has finished, and delete the boost directory from your home directory
 
 #### *Note for Raspbian Jessie users:*
 
-If you are using the older Raspbian Jessie image, compiling Monero is a bit more complicated. The version of Boost available in the Debian Jessie repositories is too old to use with Monero, and thus you must compile a newer version yourself. The following explains the extra steps, and has been tested on a Raspberry Pi 2 with a clean install of minimal Raspbian Jessie.
+If you are using the older Raspbian Jessie image, compiling MonetaVerde is a bit more complicated. The version of Boost available in the Debian Jessie repositories is too old to use with MonetaVerde, and thus you must compile a newer version yourself. The following explains the extra steps, and has been tested on a Raspberry Pi 2 with a clean install of minimal Raspbian Jessie.
 
 * As before, `apt-get update && apt-get upgrade` to install all of the latest software, and increase the system swap size
 
@@ -323,7 +323,7 @@ If you are using the older Raspbian Jessie image, compiling Monero is a bit more
     ```
 
 
-* Then, install the dependencies for Monero except `libunwind` and `libboost-all-dev`
+* Then, install the dependencies for MonetaVerde except `libunwind` and `libboost-all-dev`
 
 * Install the latest version of boost (this may first require invoking `apt-get remove --purge libboost*` to remove a previous version if you're not using a clean install):
 
@@ -344,7 +344,7 @@ If you are using the older Raspbian Jessie image, compiling Monero is a bit more
 
 * Wait ~4 hours
 
-* From here, follow the [general Raspberry Pi instructions](#on-the-raspberry-pi) from the "Clone monero and checkout most recent release version" step.
+* From here, follow the [general Raspberry Pi instructions](#on-the-raspberry-pi) from the "Clone MonetaVerde and checkout most recent release version" step.
 
 #### On Windows:
 
@@ -396,7 +396,7 @@ application.
 * To git clone, run:
 
     ```bash
-    git clone --recursive https://github.com/monero-project/monero.git
+    git clone --recursive https://github.com/MonetaVerde-project/MonetaVerde.git
     ```
 
 **Building**
@@ -404,10 +404,10 @@ application.
 * Change to the cloned directory, run:
 
     ```bash
-    cd monero
+    cd MonetaVerde
     ```
 
-* If you would like a specific [version/tag](https://github.com/monero-project/monero/tags), do a git checkout for that version. eg. 'v0.15.0.0'. If you don't care about the version and just want binaries from master, skip this step:
+* If you would like a specific [version/tag](https://github.com/MonetaVerde-project/MonetaVerde/tags), do a git checkout for that version. eg. 'v0.15.0.0'. If you don't care about the version and just want binaries from master, skip this step:
 	
     ```bash
     git checkout v0.15.0.0
@@ -443,9 +443,9 @@ application.
 
 ### On FreeBSD:
 
-The project can be built from scratch by following instructions for Linux above(but use `gmake` instead of `make`). If you are running monero in a jail you need to add the flag: `allow.sysvipc=1` to your jail configuration, otherwise lmdb will throw the error message: `Failed to open lmdb environment: Function not implemented`.
+The project can be built from scratch by following instructions for Linux above(but use `gmake` instead of `make`). If you are running MonetaVerde in a jail you need to add the flag: `allow.sysvipc=1` to your jail configuration, otherwise lmdb will throw the error message: `Failed to open lmdb environment: Function not implemented`.
 
-We expect to add Monero into the ports tree in the near future, which will aid in managing installations using ports or packages.
+We expect to add MonetaVerde into the ports tree in the near future, which will aid in managing installations using ports or packages.
 
 ### On OpenBSD:
 
@@ -454,9 +454,9 @@ You will need to add a few packages to your system. `pkg_add cmake gmake zeromq 
 The `doxygen` and `graphviz` packages are optional and require the xbase set.
 Running the test suite also requires `py-requests` package.
 
-Build monero: `env DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/usr/local gmake release-static`
+Build MonetaVerde: `env DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/usr/local gmake release-static`
 
-Note: you may encounter the following error, when compiling the latest version of monero as a normal user:
+Note: you may encounter the following error, when compiling the latest version of MonetaVerde as a normal user:
 
 ```
 LLVM ERROR: out of memory
@@ -482,13 +482,13 @@ Then you can run make as usual.
 
 ```bash
 # Build image (for ARM 32-bit)
-docker build -f utils/build_scripts/android32.Dockerfile -t monero-android .
+docker build -f utils/build_scripts/android32.Dockerfile -t MonetaVerde-android .
 # Build image (for ARM 64-bit)
-docker build -f utils/build_scripts/android64.Dockerfile -t monero-android .
+docker build -f utils/build_scripts/android64.Dockerfile -t MonetaVerde-android .
 # Create container
-docker create -it --name monero-android monero-android bash
+docker create -it --name MonetaVerde-android MonetaVerde-android bash
 # Get binaries
-docker cp monero-android:/src/build/release/bin .
+docker cp MonetaVerde-android:/src/build/release/bin .
 ```
 
 ### Building portable statically linked binaries
@@ -525,11 +525,11 @@ You can also cross-compile static binaries on Linux for Windows and macOS with t
 
 The required packages are the names for each toolchain on apt. Depending on your distro, they may have different names.
 
-Using `depends` might also be easier to compile Monero on Windows than using MSYS. Activate Windows Subsystem for Linux (WSL) with a distro (for example Ubuntu), install the apt build-essentials and follow the `depends` steps as depicted above.
+Using `depends` might also be easier to compile MonetaVerde on Windows than using MSYS. Activate Windows Subsystem for Linux (WSL) with a distro (for example Ubuntu), install the apt build-essentials and follow the `depends` steps as depicted above.
 
 The produced binaries still link libc dynamically. If the binary is compiled on a current distribution, it might not run on an older distribution with an older installation of libc. Passing `-DBACKCOMPAT=ON` to cmake will make sure that the binary will run on systems having at least libc version 2.17.
 
-## Installing Monero from a package
+## Installing MonetaVerde from a package
 
 **DISCLAIMER: These packages are not part of this repository or maintained by this project's contributors, and as such, do not go through the same review process to ensure their trustworthiness and security.**
 
@@ -538,40 +538,40 @@ Packages are available for
 * Debian Bullseye and Sid
 
     ```bash
-    sudo apt install monero
+    sudo apt install MonetaVerde
     ```
-More info and versions in the [Debian package tracker](https://tracker.debian.org/pkg/monero).
+More info and versions in the [Debian package tracker](https://tracker.debian.org/pkg/MonetaVerde).
 
 * Arch Linux (via [AUR](https://aur.archlinux.org/)):
-  - Stable release: [`monero`](https://aur.archlinux.org/packages/monero)
-  - Bleeding edge: [`monero-git`](https://aur.archlinux.org/packages/monero-git)
+  - Stable release: [`MonetaVerde`](https://aur.archlinux.org/packages/MonetaVerde)
+  - Bleeding edge: [`MonetaVerde-git`](https://aur.archlinux.org/packages/MonetaVerde-git)
 
 * Void Linux:
 
     ```bash
-    xbps-install -S monero
+    xbps-install -S MonetaVerde
     ```
 
 * GuixSD
 
     ```bash
-    guix package -i monero
+    guix package -i MonetaVerde
     ```
 
 * Docker
 
     ```bash
     # Build using all available cores
-    docker build -t monero .
+    docker build -t MonetaVerde .
     
     # or build using a specific number of cores (reduce RAM requirement)
-    docker build --build-arg NPROC=1 -t monero .
+    docker build --build-arg NPROC=1 -t MonetaVerde .
     
     # either run in foreground
-    docker run -it -v /monero/chain:/root/.bitmonero -v /monero/wallet:/wallet -p 18080:18080 monero
+    docker run -it -v /MonetaVerde/chain:/root/.MonetaVerde -v /MonetaVerde/wallet:/wallet -p 18080:18080 MonetaVerde
     
     # or in background
-    docker run -it -d -v /monero/chain:/root/.bitmonero -v /monero/wallet:/wallet -p 18080:18080 monero
+    docker run -it -d -v /MonetaVerde/chain:/root/.MonetaVerde -v /MonetaVerde/wallet:/wallet -p 18080:18080 MonetaVerde
     ```
 
 * The build needs 3 GB space.
@@ -579,17 +579,17 @@ More info and versions in the [Debian package tracker](https://tracker.debian.or
 
 Packaging for your favorite distribution would be a welcome contribution!
 
-## Running monerod
+## Running MonetaVerded
 
 The build places the binary in `bin/` sub-directory within the build directory
 from which cmake was invoked (repository root by default). To run in
 foreground:
 
 ```bash
-./bin/monerod
+./bin/MonetaVerded
 ```
 
-To list all available options, run `./bin/monerod --help`.  Options can be
+To list all available options, run `./bin/MonetaVerded --help`.  Options can be
 specified either on the command line or in a configuration file passed by the
 `--config-file` argument.  To specify an option in the configuration file, add
 a line with the syntax `argumentname=value`, where `argumentname` is the name
@@ -598,18 +598,18 @@ of the argument without the leading dashes, for example `log-level=1`.
 To run in background:
 
 ```bash
-./bin/monerod --log-file monerod.log --detach
+./bin/MonetaVerded --log-file MonetaVerded.log --detach
 ```
 
 To run as a systemd service, copy
-[monerod.service](utils/systemd/monerod.service) to `/etc/systemd/system/` and
-[monerod.conf](utils/conf/monerod.conf) to `/etc/`. The [example
-service](utils/systemd/monerod.service) assumes that the user `monero` exists
+[MonetaVerded.service](utils/systemd/MonetaVerded.service) to `/etc/systemd/system/` and
+[MonetaVerded.conf](utils/conf/MonetaVerded.conf) to `/etc/`. The [example
+service](utils/systemd/MonetaVerded.service) assumes that the user `MonetaVerde` exists
 and its home is the data directory specified in the [example
-config](utils/conf/monerod.conf).
+config](utils/conf/MonetaVerded.conf).
 
 If you're on Mac, you may need to add the `--max-concurrency 1` option to
-monero-wallet-cli, and possibly monerod, if you get crashes refreshing.
+MonetaVerde-wallet-cli, and possibly MonetaVerded, if you get crashes refreshing.
 
 ## Internationalization
 
@@ -623,32 +623,32 @@ See [README.i18n.md](README.i18n.md).
 > used solely for relaying transactions received over local RPC. This provides
 > privacy and better protection against surrounding node (sybil) attacks.
 
-While Monero isn't made to integrate with Tor, it can be used wrapped with torsocks, by
+While MonetaVerde isn't made to integrate with Tor, it can be used wrapped with torsocks, by
 setting the following configuration parameters and environment variables:
 
 * `--p2p-bind-ip 127.0.0.1` on the command line or `p2p-bind-ip=127.0.0.1` in
-  monerod.conf to disable listening for connections on external interfaces.
-* `--no-igd` on the command line or `no-igd=1` in monerod.conf to disable IGD
+  MonetaVerded.conf to disable listening for connections on external interfaces.
+* `--no-igd` on the command line or `no-igd=1` in MonetaVerded.conf to disable IGD
   (UPnP port forwarding negotiation), which is pointless with Tor.
 * `DNS_PUBLIC=tcp` or `DNS_PUBLIC=tcp://x.x.x.x` where x.x.x.x is the IP of the
   desired DNS server, for DNS requests to go over TCP, so that they are routed
-  through Tor. When IP is not specified, monerod uses the default list of
+  through Tor. When IP is not specified, MonetaVerded uses the default list of
   servers defined in [src/common/dns_utils.cpp](src/common/dns_utils.cpp).
-* `TORSOCKS_ALLOW_INBOUND=1` to tell torsocks to allow monerod to bind to interfaces
+* `TORSOCKS_ALLOW_INBOUND=1` to tell torsocks to allow MonetaVerded to bind to interfaces
    to accept connections from the wallet. On some Linux systems, torsocks
    allows binding to localhost by default, so setting this variable is only
    necessary to allow binding to local LAN/VPN interfaces to allow wallets to
    connect from remote hosts. On other systems, it may be needed for local wallets
    as well.
 * Do NOT pass `--detach` when running through torsocks with systemd, (see
-  [utils/systemd/monerod.service](utils/systemd/monerod.service) for details).
+  [utils/systemd/MonetaVerded.service](utils/systemd/MonetaVerded.service) for details).
 * If you use the wallet with a Tor daemon via the loopback IP (eg, 127.0.0.1:9050),
   then use `--untrusted-daemon` unless it is your own hidden service.
 
-Example command line to start monerod through Tor:
+Example command line to start MonetaVerded through Tor:
 
 ```bash
-DNS_PUBLIC=tcp torsocks monerod --p2p-bind-ip 127.0.0.1 --no-igd
+DNS_PUBLIC=tcp torsocks MonetaVerded --p2p-bind-ip 127.0.0.1 --no-igd
 ```
 
 ### Using Tor on Tails
@@ -659,13 +659,13 @@ allow inbound connections. Full example:
 
 ```bash
 sudo iptables -I OUTPUT 2 -p tcp -d 127.0.0.1 -m tcp --dport 18081 -j ACCEPT
-DNS_PUBLIC=tcp torsocks ./monerod --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 \
+DNS_PUBLIC=tcp torsocks ./MonetaVerded --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 \
     --data-dir /home/amnesia/Persistent/your/directory/to/the/blockchain
 ```
 
 ## Debugging
 
-This section contains general instructions for debugging failed installs or problems encountered with Monero. First, ensure you are running the latest version built from the Github repo.
+This section contains general instructions for debugging failed installs or problems encountered with MonetaVerde. First, ensure you are running the latest version built from the Github repo.
 
 ### Obtaining stack traces and core dumps on Unix systems
 
@@ -678,7 +678,7 @@ Run the build.
 Once it stalls, enter the following command:
 
 ```bash
-gdb /path/to/monerod `pidof monerod`
+gdb /path/to/MonetaVerded `pidof MonetaVerded`
 ```
 
 Type `thread apply all bt` within gdb in order to obtain the stack trace
@@ -691,12 +691,12 @@ Enter `echo core | sudo tee /proc/sys/kernel/core_pattern` to stop cores from be
 
 Run the build.
 
-When it terminates with an output along the lines of "Segmentation fault (core dumped)", there should be a core dump file in the same directory as monerod. It may be named just `core`, or `core.xxxx` with numbers appended.
+When it terminates with an output along the lines of "Segmentation fault (core dumped)", there should be a core dump file in the same directory as MonetaVerded. It may be named just `core`, or `core.xxxx` with numbers appended.
 
 You can now analyse this core dump with `gdb` as follows:
 
 ```bash
-gdb /path/to/monerod /path/to/dumpfile`
+gdb /path/to/MonetaVerded /path/to/dumpfile`
 ```
 
 Print the stack trace with `bt`
@@ -707,13 +707,13 @@ Print the stack trace with `bt`
 coredumpctl -1 gdb
 ```
 
-#### To run monero within gdb:
+#### To run MonetaVerde within gdb:
 
-Type `gdb /path/to/monerod`
+Type `gdb /path/to/MonetaVerded`
 
 Pass command-line options with `--args` followed by the relevant arguments
 
-Type `run` to run monerod
+Type `run` to run MonetaVerded
 
 ### Analysing memory corruption
 
@@ -721,17 +721,17 @@ There are two tools available:
 
 #### ASAN
 
-Configure Monero with the -D SANITIZE=ON cmake flag, eg:
+Configure MonetaVerde with the -D SANITIZE=ON cmake flag, eg:
 
 ```bash
 cd build/debug && cmake -D SANITIZE=ON -D CMAKE_BUILD_TYPE=Debug ../..
 ```
 
-You can then run the monero tools normally. Performance will typically halve.
+You can then run the MonetaVerde tools normally. Performance will typically halve.
 
 #### valgrind
 
-Install valgrind and run as `valgrind /path/to/monerod`. It will be very slow.
+Install valgrind and run as `valgrind /path/to/MonetaVerded`. It will be very slow.
 
 ### LMDB
 
@@ -740,7 +740,7 @@ Instructions for debugging suspected blockchain corruption as per @HYC
 There is an `mdb_stat` command in the LMDB source that can print statistics about the database but it's not routinely built. This can be built with the following command:
 
 ```bash
-cd ~/monero/external/db_drivers/liblmdb && make
+cd ~/MonetaVerde/external/db_drivers/liblmdb && make
 ```
 
 The output of `mdb_stat -ea <path to blockchain dir>` will indicate inconsistencies in the blocks, block_heights and block_info table.
@@ -755,13 +755,13 @@ These records are dumped as hex data, where the first line is the key and the se
 
 ### Socket-based
 
-Because of the nature of the socket-based protocols that drive monero, certain protocol weaknesses are somewhat unavoidable at this time. While these weaknesses can theoretically be fully mitigated, the effort required (the means) may not justify the ends. As such, please consider taking the following precautions if you are a monero node operator:
+Because of the nature of the socket-based protocols that drive MonetaVerde, certain protocol weaknesses are somewhat unavoidable at this time. While these weaknesses can theoretically be fully mitigated, the effort required (the means) may not justify the ends. As such, please consider taking the following precautions if you are a MonetaVerde node operator:
 
-- Run `monerod` on a "secured" machine. If operational security is not your forte, at a very minimum, have a dedicated a computer running `monerod` and **do not** browse the web, use email clients, or use any other potentially harmful apps on your `monerod` machine. **Do not click links or load URL/MUA content on the same machine**. Doing so may potentially exploit weaknesses in commands which accept "localhost" and "127.0.0.1".
-- If you plan on hosting a public "remote" node, start `monerod` with `--restricted-rpc`. This is a must.
+- Run `MonetaVerded` on a "secured" machine. If operational security is not your forte, at a very minimum, have a dedicated a computer running `MonetaVerded` and **do not** browse the web, use email clients, or use any other potentially harmful apps on your `MonetaVerded` machine. **Do not click links or load URL/MUA content on the same machine**. Doing so may potentially exploit weaknesses in commands which accept "localhost" and "127.0.0.1".
+- If you plan on hosting a public "remote" node, start `MonetaVerded` with `--restricted-rpc`. This is a must.
 
 ### Blockchain-based
 
 Certain blockchain "features" can be considered "bugs" if misused correctly. Consequently, please consider the following:
 
-- When receiving monero, be aware that it may be locked for an arbitrary time if the sender elected to, preventing you from spending that monero until the lock time expires. You may want to hold off acting upon such a transaction until the unlock time lapses. To get a sense of that time, you can consider the remaining blocktime until unlock as seen in the `show_transfers` command.
+- When receiving MonetaVerde, be aware that it may be locked for an arbitrary time if the sender elected to, preventing you from spending that MonetaVerde until the lock time expires. You may want to hold off acting upon such a transaction until the unlock time lapses. To get a sense of that time, you can consider the remaining blocktime until unlock as seen in the `show_transfers` command.
