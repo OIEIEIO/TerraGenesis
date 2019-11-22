@@ -21,28 +21,6 @@
 // MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
 // THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
 // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUname: wownero
-version: 0.11.1.0-1
-version: 0.5.0.0
-summary: "Monero: the secure, private, untraceable cryptocurrency https://getmonero.org"
-summary: "Wownero: the secure, private, untraceable cryptocurrency http://wownero.org"
-description: |
-description: |
-    Monero is a private, secure, untraceable, decentralised digital currency.
-    Wownero: a fairly launched privacy-centric meme coin with no premine and a finite supply.
-    You are your bank, you control your funds, and nobody can trace your transfers
-    unless you allow them to do so.
-grade: devel
-grade: devel
-confinement: strict
-confinement: strict
-
-
-apps:
-apps:
-    monerod:
-    wownerod:
-        daemon: forking
-        daemon: forkingDING, BUT NOT LIMITED TO,
 // PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
 // INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
 // STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
