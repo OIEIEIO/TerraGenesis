@@ -196,11 +196,11 @@ FreeBSD one liner for required to build dependencies
 
 Clone recursively to pull-in needed submodule(s):
 
-`$ git clone --recursive https://github.com/MonetaVerde-project/MonetaVerde`
+`$ git clone --recursive https://github.com/monetaverde2`
 
 If you already have a repo cloned, initialize and update:
 
-`$ cd MonetaVerde && git submodule init && git submodule update`
+`$ cd monetaVerde && git submodule init && git submodule update`
 
 ### Build instructions
 
