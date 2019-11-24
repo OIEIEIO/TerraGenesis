@@ -195,23 +195,23 @@ namespace config
   uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0xeab; // Vd
   uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x5d2b; // Vi
   uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x542c; // Vs
-  uint16_t const P2P_DEFAULT_PORT = 26080;
-  uint16_t const RPC_DEFAULT_PORT = 26081;
-  uint16_t const ZMQ_RPC_DEFAULT_PORT = 26082;
+  uint16_t const P2P_DEFAULT_PORT = 36080;
+  uint16_t const RPC_DEFAULT_PORT = 36081;
+  uint16_t const ZMQ_RPC_DEFAULT_PORT = 36082;
   boost::uuids::uuid const NETWORK_ID = { {
       0x12 ,0x11, 0xF1, 0x71 , 0x61, 0x04 , 0x41, 0x61, 0x17, 0x31, 0x00, 0x82, 0x16, 0xA1, 0xA1, 0x10
     } }; // Buckwheat's milkshake
-  std::string const GENESIS_TX = "";
-  uint32_t const GENESIS_NONCE = 10000;
+  std::string const GENESIS_TX = "013c01ff0001ffffffffff1f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121012a1a936be5d91c01ee876e38c13fab0ee11cbe86011a2bf7740fb5ebd39d267d";
+  uint32_t const GENESIS_NONCE = 70;
 
   namespace testnet
   {
     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 53;
     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 54;
     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 63;
-    uint16_t const P2P_DEFAULT_PORT = 36080;
-    uint16_t const RPC_DEFAULT_PORT = 36081;
-    uint16_t const ZMQ_RPC_DEFAULT_PORT = 36082;
+    uint16_t const P2P_DEFAULT_PORT = 46080;
+    uint16_t const RPC_DEFAULT_PORT = 46081;
+    uint16_t const ZMQ_RPC_DEFAULT_PORT = 46082;
     boost::uuids::uuid const NETWORK_ID = { {
         0x12 ,0x11, 0xF1, 0x71 , 0x61, 0x04 , 0x41, 0x61, 0x17, 0x31, 0x00, 0x82, 0x16, 0xA1, 0xA1, 0x11
       } }; // Buckwheat's milkshake
@@ -224,9 +224,9 @@ namespace config
     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 24;
     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 25;
     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 36;
-    uint16_t const P2P_DEFAULT_PORT = 46080;
-    uint16_t const RPC_DEFAULT_PORT = 46081;
-    uint16_t const ZMQ_RPC_DEFAULT_PORT = 46082;
+    uint16_t const P2P_DEFAULT_PORT = 56080;
+    uint16_t const RPC_DEFAULT_PORT = 56081;
+    uint16_t const ZMQ_RPC_DEFAULT_PORT = 56082;
     boost::uuids::uuid const NETWORK_ID = { {
         0x12 ,0x11, 0xF1, 0x71 , 0x61, 0x04 , 0x41, 0x61, 0x17, 0x31, 0x00, 0x82, 0x16, 0xA1, 0xA1, 0x12
       } }; // Buckwheat's milkshake

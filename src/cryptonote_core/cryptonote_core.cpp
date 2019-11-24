@@ -1630,9 +1630,18 @@ namespace cryptonote
     {
       std::string main_message;
       if (m_offline)
-        main_message = "The daemon is running offline and will not attempt to sync to the Monero network.";
+        main_message = "The daemon is running offline and will not attempt to sync to the MonetaVerde network.";
       else
         main_message = "The daemon will start synchronizing with the network. This may take a long time to complete.";
+                       MGINFO_GREEN(ENDL <<
+                       "\n \n"
+                                       "   __     __)                __    __)            \n"
+                                       "  (, /|  /|                 (, )  /          /)   \n"
+                                       "    / | / |  _____    _ _/_ _  | /  _  __  _(/  _ \n"
+                                       " ) /  |/  |_(_) / (__(/_(__(_(_|/ _(/_/ (_(_(__(/_\n"
+                                       "(_/   '                        |                  \n"
+
+                       "\n \n" << ENDL);
       MGINFO_YELLOW(ENDL << "**********************************************************************" << ENDL
         << main_message << ENDL
         << ENDL
