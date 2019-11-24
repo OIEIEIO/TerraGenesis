@@ -196,7 +196,7 @@ FreeBSD one liner for required to build dependencies
 
 Clone recursively to pull-in needed submodule(s):
 
-`$ git clone --recursive https://github.com/monetaverde2`
+`$ git clone --recursive https://github.com/OIEIEIO/monetaverde2`
 
 If you already have a repo cloned, initialize and update:
 
