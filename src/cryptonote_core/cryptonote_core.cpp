@@ -1642,7 +1642,7 @@ namespace cryptonote
                                        "(_/   '                        |                  \n"
 
                        "\n \n" << ENDL);
-      MGINFO_YELLOW(ENDL << "**********************************************************************" << ENDL
+      MGINFO_GREEN(ENDL << "**********************************************************************" << ENDL
         << main_message << ENDL
         << ENDL
         << "You can set the level of process detailization through \"set_log <level|categories>\" command," << ENDL
