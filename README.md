@@ -213,7 +213,7 @@ invokes cmake commands as needed.
 * Change to the root of the source code directory, change to the most recent release branch, and build:
 
     ```bash
-    cd monetaVerde
+    cd monetaVerde2
     
     make
     ```
