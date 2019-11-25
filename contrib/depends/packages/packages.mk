@@ -10,7 +10,7 @@ android_native_packages = android_ndk
 android_packages = ncurses readline sodium
 
 darwin_native_packages = native_biplist native_ds_store native_mac_alias
-darwin_packages = sodium-darwin ncurses readline 
+darwin_packages = sodium ncurses readline $(hardware_packages)
 
 linux_packages = eudev ncurses readline sodium
 qt_packages = qt
