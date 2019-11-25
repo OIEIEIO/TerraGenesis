@@ -410,7 +410,12 @@ PRAGMA_WARNING_DISABLE_VS(4355)
       else
       {
         _dbg3("[sock " << socket().native_handle() << "] peer closed connection");
-        if (m_ready_to_close)
+        bool do_shutdown = false;
+        CRITICAL_REGION_BEGIN(m_send_que_lock);
+        if(!m_send_que.size())
+          do_shutdown = true;
+        CRITICAL_REGION_END();
+        if (m_ready_to_close || do_shutdown)
           shutdown();
       }
       m_ready_to_close = true;
