@@ -30,10 +30,6 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers
 
 ## Development resources
 
-## Vulnerability response
-
-- Our [Vulnerability Response Process](https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
-- We are also available via [HackerOne](https://hackerone.com/monero)
 
 ## Research
 
@@ -49,16 +45,6 @@ Researchers are available on IRC in [#monero-research-lab on Freenode](https://w
 ## Translations
 
 ## Build Status
-
-### IMPORTANT
-
-## Coverage
-
-| Type      | Status |
-|-----------|--------|
-| Coverity  | [![Coverity Status](https://scan.coverity.com/projects/9657/badge.svg)](https://scan.coverity.com/projects/9657/)
-| Coveralls | [![Coveralls Status](https://coveralls.io/repos/github/monero-project/monero/badge.svg?branch=master)](https://coveralls.io/github/monero-project/monero?branch=master)
-| License   | [![License](https://img.shields.io/badge/license-BSD3-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 ## Introduction
 
@@ -82,7 +68,7 @@ As with many development projects, the repository on Github is considered to be 
 
 ## Supporting the project
 
-MonetaVerde is a 100% community-sponsored endeavor. If you want to join our efforts, the easiest thing you can do is support the project financially. Both MonetaVerde and Bitcoin donations can be made to **donate.mcngreen.com** if using a client that supports the [OpenAlias](https://openalias.org) standard. Alternatively you can send XMR to the MonetaVerde donation address via the `donate` command (type `help` in the command-line wallet for details).
+MonetaVerde is a 100% community-sponsored endeavor. If you want to join our efforts, the easiest thing you can do is support the project financially. Both MonetaVerde and Bitcoin donations can be made to **donate.mcn.green* if using a client that supports the [OpenAlias](https://openalias.org) standard. Alternatively you can send XMR to the MonetaVerde donation address via the `donate` command (type `help` in the command-line wallet for details).
 
 The MonetaVerde donation address is: 
 
@@ -137,7 +123,7 @@ library archives (`.a`).
 | Graphviz     | any           | NO       | `graphviz`           | `graphviz`   | `graphviz`          | YES      | Documentation   |
 | lrelease     | ?             | NO       | `qttools5-dev-tools` | `qt5-tools`  | `qt5-linguist`      | YES      | Translations    |
 | libhidapi    | ?             | NO       | `libhidapi-dev`      | `hidapi`     | `hidapi-devel`      | YES      | Hardware wallet |
-| libusb       | ?             | NO       | `libusb-dev`         | `libusb`     | `libusb-devel`      | YES      | Hardware wallet |
+| libusb-1.0-dev    | 1.0             | NO       | `libusb-1.0-0-dev`         | `libusb`     | `libusb-devel`      | YES      | Hardware wallet |
 | libprotobuf  | ?             | NO       | `libprotobuf-dev`    | `protobuf`   | `protobuf-devel`    | YES      | Hardware wallet |
 | protoc       | ?             | NO       | `protobuf-compiler`  | `protobuf`   | `protobuf-compiler` | YES      | Hardware wallet |
 
@@ -148,7 +134,7 @@ build the library binary manually. This can be done with the following command `
 
 Install all dependencies at once on Debian/Ubuntu:
 
-``` sudo apt update && sudo apt install build-essential cmake pkg-config libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libunwind8-dev liblzma-dev libreadline6-dev libldns-dev libexpat1-dev doxygen graphviz libpgm-dev qttools5-dev-tools libhidapi-dev libusb-dev libprotobuf-dev protobuf-compiler ```
+``` sudo apt update && sudo apt install build-essential cmake pkg-config libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libunwind8-dev liblzma-dev libreadline6-dev libldns-dev libexpat1-dev doxygen graphviz libpgm-dev qttools5-dev-tools libhidapi-dev libusb-1.0-0-dev libprotobuf-dev protobuf-compiler xsltproc gperf autoconf automake libtool-bin libprotobuf-c-dev```
 
 Install all dependencies at once on macOS with the provided Brewfile:
 ``` brew update && brew bundle --file=contrib/brew/Brewfile ```
