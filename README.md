@@ -160,11 +160,11 @@ FreeBSD one liner for required to build dependencies
 
 Clone recursively to pull-in needed submodule(s):
 
-`$ git clone --recursive https://github.com/OIEIEIO/monetaverde2`
+`$ git clone --recursive https://github.com/OIEIEIO/monetaverde`
 
 If you already have a repo cloned, initialize and update:
 
-`$ cd monetaverde2 && git submodule init && git submodule update`
+`$ cd monetaverde && git submodule init && git submodule update`
 
 ### Build instructions
 
@@ -177,7 +177,7 @@ invokes cmake commands as needed.
 * Change to the root of the source code directory, change to the most recent release branch, and build:
 
     ```bash
-    cd monetaVerde2
+    cd monetaVerde
     
     make
     ```
@@ -252,7 +252,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 * Clone MonetaVerde and checkout the most recent release version:
 
     ```bash
-    git clone https://github.com/monetaverde-project/MonetaVerde.git
+    git clone https://github.com/monetaverde
     cd monetaverde
     git checkout tags/v2.0.0
     ```
@@ -267,7 +267,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * The resulting executables can be found in `build/release/bin`
 
-* Add `PATH="$PATH:$HOME/MonetaVerde/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/monetaverde/build/release/bin"` to `.profile`
 
 * Run MonetaVerde with `monetaverded --detach`
 
@@ -360,7 +360,7 @@ application.
 * To git clone, run:
 
     ```bash
-    git clone --recursive https://github.com/MonetaVerde-project/MonetaVerde.git
+    git clone --recursive https://github.com/monetaverde
     ```
 
 **Building**
@@ -371,10 +371,10 @@ application.
     cd MonetaVerde
     ```
 
-* If you would like a specific [version/tag](https://github.com/MonetaVerde-project/MonetaVerde/tags), do a git checkout for that version. eg. 'v0.15.0.0'. If you don't care about the version and just want binaries from master, skip this step:
+* If you would like a specific [version/tag](https://github.com/monetaverde/tags), do a git checkout for that version. eg. 'v0.15.0.0'. If you don't care about the version and just want binaries from master, skip this step:
 	
     ```bash
-    git checkout v0.15.0.0
+    git checkout v2.0.0
     ```
 
 * If you are on a 64-bit system, run:
@@ -502,7 +502,7 @@ Packages are available for
 * Debian Bullseye and Sid
 
     ```bash
-    sudo apt install MonetaVerde
+    sudo apt install monetaverde
     ```
 More info and versions in the [Debian package tracker](https://tracker.debian.org/pkg/MonetaVerde).
 
@@ -513,29 +513,29 @@ More info and versions in the [Debian package tracker](https://tracker.debian.or
 * Void Linux:
 
     ```bash
-    xbps-install -S MonetaVerde
+    xbps-install -S monetaverde
     ```
 
 * GuixSD
 
     ```bash
-    guix package -i MonetaVerde
+    guix package -i monetaverde
     ```
 
 * Docker
 
     ```bash
     # Build using all available cores
-    docker build -t MonetaVerde .
+    docker build -t monetaverde .
     
     # or build using a specific number of cores (reduce RAM requirement)
-    docker build --build-arg NPROC=1 -t MonetaVerde .
+    docker build --build-arg NPROC=1 -t monetaverde .
     
     # either run in foreground
-    docker run -it -v /MonetaVerde/chain:/root/.MonetaVerde -v /MonetaVerde/wallet:/wallet -p 18080:18080 MonetaVerde
+    docker run -it -v /monetaverde/chain:/root/.monetaverde -v /monetaverde/wallet:/wallet -p 36080:36080 monetaverde
     
     # or in background
-    docker run -it -d -v /MonetaVerde/chain:/root/.MonetaVerde -v /MonetaVerde/wallet:/wallet -p 18080:18080 MonetaVerde
+    docker run -it -d -v /MonetaVerde/chain:/root/.MonetaVerde -v /MonetaVerde/wallet:/wallet -p 36080:36080 monetaverde
     ```
 
 * The build needs 3 GB space.
@@ -550,10 +550,10 @@ from which cmake was invoked (repository root by default). To run in
 foreground:
 
 ```bash
-./bin/MonetaVerded
+./bin/monetaverde
 ```
 
-To list all available options, run `./bin/MonetaVerded --help`.  Options can be
+To list all available options, run `./bin/monetaverde --help`.  Options can be
 specified either on the command line or in a configuration file passed by the
 `--config-file` argument.  To specify an option in the configuration file, add
 a line with the syntax `argumentname=value`, where `argumentname` is the name
@@ -562,18 +562,18 @@ of the argument without the leading dashes, for example `log-level=1`.
 To run in background:
 
 ```bash
-./bin/MonetaVerded --log-file MonetaVerded.log --detach
+./bin/monetaverded --log-file monetaverde.log --detach
 ```
 
 To run as a systemd service, copy
-[MonetaVerded.service](utils/systemd/MonetaVerded.service) to `/etc/systemd/system/` and
-[MonetaVerded.conf](utils/conf/MonetaVerded.conf) to `/etc/`. The [example
-service](utils/systemd/MonetaVerded.service) assumes that the user `MonetaVerde` exists
+[monetaverded.service](utils/systemd/monetaverded.service) to `/etc/systemd/system/` and
+monetaverded.conf](utils/conf/monetaverded.conf) to `/etc/`. The [example
+service](utils/systemd/monetaverded.service) assumes that the user `monetaverde` exists
 and its home is the data directory specified in the [example
-config](utils/conf/MonetaVerded.conf).
+config](utils/conf/monetaverded.conf).
 
 If you're on Mac, you may need to add the `--max-concurrency 1` option to
-MonetaVerde-wallet-cli, and possibly MonetaVerded, if you get crashes refreshing.
+monetaverde-wallet-cli, and possibly monetaverded, if you get crashes refreshing.
 
 ## Internationalization
 
@@ -609,10 +609,10 @@ setting the following configuration parameters and environment variables:
 * If you use the wallet with a Tor daemon via the loopback IP (eg, 127.0.0.1:9050),
   then use `--untrusted-daemon` unless it is your own hidden service.
 
-Example command line to start MonetaVerded through Tor:
+Example command line to start monetaverded through Tor:
 
 ```bash
-DNS_PUBLIC=tcp torsocks MonetaVerded --p2p-bind-ip 127.0.0.1 --no-igd
+DNS_PUBLIC=tcp torsocks monetaverded --p2p-bind-ip 127.0.0.1 --no-igd
 ```
 
 ### Using Tor on Tails
@@ -622,8 +622,8 @@ to add a rule to allow this connection too, in addition to telling torsocks to
 allow inbound connections. Full example:
 
 ```bash
-sudo iptables -I OUTPUT 2 -p tcp -d 127.0.0.1 -m tcp --dport 18081 -j ACCEPT
-DNS_PUBLIC=tcp torsocks ./MonetaVerded --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 \
+sudo iptables -I OUTPUT 2 -p tcp -d 127.0.0.1 -m tcp --dport 36081 -j ACCEPT
+DNS_PUBLIC=tcp torsocks ./monetaverded --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 \
     --data-dir /home/amnesia/Persistent/your/directory/to/the/blockchain
 ```
 
@@ -642,7 +642,7 @@ Run the build.
 Once it stalls, enter the following command:
 
 ```bash
-gdb /path/to/MonetaVerded `pidof MonetaVerded`
+gdb /path/to/monetaverded `pidof monetaverded`
 ```
 
 Type `thread apply all bt` within gdb in order to obtain the stack trace
@@ -660,7 +660,7 @@ When it terminates with an output along the lines of "Segmentation fault (core d
 You can now analyse this core dump with `gdb` as follows:
 
 ```bash
-gdb /path/to/MonetaVerded /path/to/dumpfile`
+gdb /path/to/monetaverded /path/to/dumpfile`
 ```
 
 Print the stack trace with `bt`
@@ -673,11 +673,11 @@ coredumpctl -1 gdb
 
 #### To run MonetaVerde within gdb:
 
-Type `gdb /path/to/MonetaVerded`
+Type `gdb /path/to/monetaverded`
 
 Pass command-line options with `--args` followed by the relevant arguments
 
-Type `run` to run MonetaVerded
+Type `run` to run monetaverded
 
 ### Analysing memory corruption
 
@@ -685,17 +685,17 @@ There are two tools available:
 
 #### ASAN
 
-Configure MonetaVerde with the -D SANITIZE=ON cmake flag, eg:
+Configure monetaverde with the -D SANITIZE=ON cmake flag, eg:
 
 ```bash
 cd build/debug && cmake -D SANITIZE=ON -D CMAKE_BUILD_TYPE=Debug ../..
 ```
 
-You can then run the MonetaVerde tools normally. Performance will typically halve.
+You can then run the monetaverde tools normally. Performance will typically halve.
 
 #### valgrind
 
-Install valgrind and run as `valgrind /path/to/MonetaVerded`. It will be very slow.
+Install valgrind and run as `valgrind /path/to/monetaverded`. It will be very slow.
 
 ### LMDB
 
@@ -704,7 +704,7 @@ Instructions for debugging suspected blockchain corruption as per @HYC
 There is an `mdb_stat` command in the LMDB source that can print statistics about the database but it's not routinely built. This can be built with the following command:
 
 ```bash
-cd ~/MonetaVerde/external/db_drivers/liblmdb && make
+cd ~/monetaverde/external/db_drivers/liblmdb && make
 ```
 
 The output of `mdb_stat -ea <path to blockchain dir>` will indicate inconsistencies in the blocks, block_heights and block_info table.
@@ -721,8 +721,8 @@ These records are dumped as hex data, where the first line is the key and the se
 
 Because of the nature of the socket-based protocols that drive MonetaVerde, certain protocol weaknesses are somewhat unavoidable at this time. While these weaknesses can theoretically be fully mitigated, the effort required (the means) may not justify the ends. As such, please consider taking the following precautions if you are a MonetaVerde node operator:
 
-- Run `MonetaVerded` on a "secured" machine. If operational security is not your forte, at a very minimum, have a dedicated a computer running `MonetaVerded` and **do not** browse the web, use email clients, or use any other potentially harmful apps on your `MonetaVerded` machine. **Do not click links or load URL/MUA content on the same machine**. Doing so may potentially exploit weaknesses in commands which accept "localhost" and "127.0.0.1".
-- If you plan on hosting a public "remote" node, start `MonetaVerded` with `--restricted-rpc`. This is a must.
+- Run `monetaverded` on a "secured" machine. If operational security is not your forte, at a very minimum, have a dedicated a computer running `monetaverded` and **do not** browse the web, use email clients, or use any other potentially harmful apps on your `monetaverded` machine. **Do not click links or load URL/MUA content on the same machine**. Doing so may potentially exploit weaknesses in commands which accept "localhost" and "127.0.0.1".
+- If you plan on hosting a public "remote" node, start `monetaverded` with `--restricted-rpc`. This is a must.
 
 ### Blockchain-based
 
