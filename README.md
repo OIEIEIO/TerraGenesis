@@ -4,48 +4,6 @@ Copyright (c) 2019-2020 MonetaVerde
 Copyright (c) 2014-2019 The Monero Project   
 Portions Copyright (c) 2012-2013 The Cryptonote developers
 
-## Table of Contents
-
-  - [Development resources](#development-resources)
-  - [Vulnerability response](#vulnerability-response)
-  - [Research](#research)
-  - [Announcements](#announcements)
-  - [Translations](#translations)
-  - [Build Status](#build-status)
-    - [IMPORTANT](#important)
-  - [Coverage](#coverage)
-  - [Introduction](#introduction)
-  - [About this project](#about-this-project)
-  - [Supporting the project](#supporting-the-project)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Scheduled software upgrades](#scheduled-software-upgrades)
-  - [Release staging schedule and protocol](#release-staging-schedule-and-protocol)
-  - [Compiling MonetaVerde from source](#compiling-MonetaVerde-from-source)
-    - [Dependencies](#dependencies)
-  - [Internationalization](#Internationalization)
-  - [Using Tor](#using-tor)
-  - [Debugging](#Debugging)
-  - [Known issues](#known-issues)
-
-## Development resources
-
-
-## Research
-
-MonetaVerde keeps in contact with the [Monero Research Lab](https://src.getmonero.org/resources/research-lab/) which is an open forum where the community coordinates research into cryptography, protocols, fungibility, analysis, and more. We welcome collaboration and contributions from outside researchers! Because not all Lab work and publications are distributed as traditional preprints or articles, they may be easy to miss if you are conducting literature reviews for your own Monero research. You are encouraged to get in touch with our researchers if you have questions, wish to collaborate, or would like guidance to help avoid unnecessarily duplicating earlier or known work.
-
-Researchers are available on IRC in [#monero-research-lab on Freenode](https://webchat.freenode.net/?randomnick=1&channels=%23monero-research-lab&prompt=1&uio=d4) or by email:
-
-- Sarang Noether, Ph.D.: [sarang@getmonero.org](mailto:sarang@getmonero.org) or [sarang.noether@protonmail.com](mailto:sarang.noether@protonmail.com); [research repository](https://github.com/SarangNoether/research-lab)
-- Surae Noether (Brandon Goodell), Ph.D.: [surae@getmonero.org](mailto:surae@getmonero.org) or [surae.noether@protonmail.com](mailto:surae.noether@protonmail.com); [research repository](https://github.com/b-g-goodell/research-lab)
-
-## Announcements
-
-## Translations
-
-## Build Status
-
 ## Introduction
 
 MonetaVerde is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
@@ -68,9 +26,26 @@ As with many development projects, the repository on Github is considered to be 
 
 ## Supporting the project
 
-MonetaVerde is a 100% community-sponsored endeavor. If you want to join our efforts, the easiest thing you can do is support the project financially. Both MonetaVerde and Bitcoin donations can be made to **donate.mcn.green* if using a client that supports the [OpenAlias](https://openalias.org) standard. Alternatively you can send XMR to the MonetaVerde donation address via the `donate` command (type `help` in the command-line wallet for details).
+MonetaVerde is a 100% community-sponsored endeavor. If you want to join our efforts, the easiest thing you can do is support the project financially. Both MonetaVerde and Bitcoin donations can be made to **donate.mcn.green* if using a client that supports the [OpenAlias](https://openalias.org) standard. Alternatively you can send MCN to the MonetaVerde donation address via the `donate` command (type `help` in your monetaverde-wallet-cli wallet for details).
 
 The MonetaVerde donation address is: 
+
+## Development resources
+
+## Research
+
+MonetaVerde keeps in contact with the [Monero Research Lab](https://src.getmonero.org/resources/research-lab/) which is an open forum where the community coordinates research into cryptography, protocols, fungibility, analysis, and more. We welcome collaboration and contributions from outside researchers! Because not all Lab work and publications are distributed as traditional preprints or articles, they may be easy to miss if you are conducting literature reviews for your own Monero research. You are encouraged to get in touch with our researchers if you have questions, wish to collaborate, or would like guidance to help avoid unnecessarily duplicating earlier or known work.
+
+Researchers are available on IRC in [#monero-research-lab on Freenode](https://webchat.freenode.net/?randomnick=1&channels=%23monero-research-lab&prompt=1&uio=d4) or by email:
+
+- Sarang Noether, Ph.D.: [sarang@getmonero.org](mailto:sarang@getmonero.org) or [sarang.noether@protonmail.com](mailto:sarang.noether@protonmail.com); [research repository](https://github.com/SarangNoether/research-lab)
+- Surae Noether (Brandon Goodell), Ph.D.: [surae@getmonero.org](mailto:surae@getmonero.org) or [surae.noether@protonmail.com](mailto:surae.noether@protonmail.com); [research repository](https://github.com/b-g-goodell/research-lab)
+
+## Announcements
+
+## Translations
+
+## Build Status
 
 ## License
 
