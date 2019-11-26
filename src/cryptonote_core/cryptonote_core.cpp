@@ -1645,7 +1645,7 @@ namespace cryptonote
       MGINFO_GREEN(ENDL << "**********************************************************************" << ENDL
         << main_message << ENDL
         << ENDL
-        << "You will see an updated message when the daemon is fully synchronized" << ENDL
+        << "You will see an YELLOW message when the daemon is fully synchronized." << ENDL
         << "" << ENDL
         << ENDL
         << "Use the \"help\" command to see the list of available commands." << ENDL
