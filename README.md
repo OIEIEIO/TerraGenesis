@@ -123,7 +123,8 @@ invokes cmake commands as needed.
 * Change to the root of the source code directory, change to the most recent release branch, and build:
 
     ```bash
-    cd monetaVerde
+    cd monetaverde
+    git checkout 2.0.0
     USE_SINGLE_BUILDDIR=1 make -j4 
     ```
 
