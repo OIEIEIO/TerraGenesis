@@ -124,8 +124,7 @@ invokes cmake commands as needed.
 
     ```bash
     cd monetaVerde
-    
-    make
+    USE_SINGLE_BUILDDIR=1 make -j4 
     ```
 
     *Optional*: If your machine has several cores and enough memory, enable
