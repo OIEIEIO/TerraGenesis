@@ -28,7 +28,7 @@
 //
 // Parts of this file are originally copyright (c) 2012-2013 The Cryptonote developers
 
-//#include "checkpoints.h"
+#include "checkpoints.h"
 
 #include "common/dns_utils.h"
 #include "string_tools.h"
