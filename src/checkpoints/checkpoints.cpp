@@ -165,12 +165,12 @@ namespace cryptonote
       return true;
     }
     if (nettype == STAGENET)
+    {
+	
       return true;
     }
     ADD_CHECKPOINT(50000,     "6021e891546d38c90a20ee50d8922e6b10cbd25de29355756bc84fb69fe4a237");
     ADD_CHECKPOINT(100000,  "8c88c02cca423f2fd744c5028ce486a415ad2a8da6376638a006062960599678");
-    {
-          
     return true;
   }
 
