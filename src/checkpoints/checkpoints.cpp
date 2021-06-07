@@ -168,8 +168,12 @@ namespace cryptonote
     {
 	
       return true;
+    }
+   // ADD_CHECKPOINT(1,     "6021e891546d38c90a20ee50d8922e6b10cbd25de29355756bc84fb69fe4a237");
+    ADD_CHECKPOINT(5500,  "8c88c02cca423f2fd744c5028ce486a415ad2a8da6376638a006062960599678");
+    return true;
   }
-
+	
   bool checkpoints::load_checkpoints_from_json(const std::string &json_hashfile_fullpath)
   {
     boost::system::error_code errcode;
