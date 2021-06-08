@@ -4746,7 +4746,7 @@ boost::optional<epee::wipeable_string> simple_wallet::new_wallet(const boost::pr
     "To start synchronizing with the daemon, use the \"refresh\" command.\n"
     "Use the \"help\" command to see the list of available commands.\n"
     "Use \"help <command>\" to see a command's documentation.\n"
-    "Always use the \"exit\" command when closing monero-wallet-cli to save \n"
+    "Always use the \"exit\" command when closing monetaverde-wallet-cli to save \n"
     "your current session's state. Otherwise, you might need to synchronize \n"
     "your wallet again (your wallet keys are NOT at risk in any case).\n")
   ;
@@ -6176,7 +6176,7 @@ void simple_wallet::check_for_inactivity_lock(bool user)
     if (!user)
     {
       const std::string speech = tr("I locked your MonetaVerde wallet to protect you while you were away");
-      std::vector<std::pair<std::string, size_t>> lines = tools::split_string_by_width(speech, 45);
+      std::vector<std::pair<std::string, size_t>> lines = tools::split_string_by_width(speech, 600);
 
       size_t max_len = 0;
       for (const auto &i: lines)
@@ -6186,12 +6186,15 @@ void simple_wallet::check_for_inactivity_lock(bool user)
       for (size_t i = 0; i < lines.size(); ++i)
         tools::msg_writer() << (i == 0 ? "/" : i == lines.size() - 1 ? "\\" : "|") << " " << lines[i].first << std::string(max_len - lines[i].second, ' ') << " " << (i == 0 ? "\\" : i == lines.size() - 1 ? "/" : "|");
       tools::msg_writer() << " " << std::string(n_u, '-') << std::endl <<
-          "        \\   (__)" << std::endl <<
-          "         \\  (oo)\\_______" << std::endl <<
-          "            (__)\\       )\\/\\" << std::endl <<
-          "                ||----w |" << std::endl <<
-          "                ||     ||" << std::endl <<
-          "" << std::endl;
+          "                         ''~``" << std::endl <<
+          "                        ( o o )" << std::endl <<
+          "+------------------.oooO--(_)--Oooo.------------------+" << std::endl <<
+          "|                                                     |" << std::endl <<
+          "|                    .oooO                            |" << std::endl <<
+          "|                    (   )   Oooo.                    |" << std::endl <<
+          "+---------------------\ (----(   )--------------------+" << std::endl <<
+          "                       \_)    ) /" << std::endl <<
+          "                             (_/" << std::endl;""
     }
     while (1)
     {
