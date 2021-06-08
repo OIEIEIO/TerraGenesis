@@ -91,9 +91,9 @@ typedef cryptonote::simple_wallet sw;
 
 #define EXTENDED_LOGS_FILE "wallet_details.log"
 
-#define DEFAULT_MIX 10
+#define DEFAULT_MIX 3
 
-#define MIN_RING_SIZE 11 // Used to inform user about min ring size -- does not track actual protocol
+#define MIN_RING_SIZE 3 // Used to inform user about min ring size -- does not track actual protocol
 
 #define OLD_AGE_WARN_THRESHOLD (30 * 86400 / DIFFICULTY_TARGET_V2) // 30 days
 
@@ -131,7 +131,7 @@ typedef cryptonote::simple_wallet sw;
     return true; \
   } while(0)
 
-#define REFRESH_PERIOD 90 // seconds
+#define REFRESH_PERIOD 30 // seconds
 
 #define CREDITS_TARGET 50000
 #define MAX_PAYMENT_DIFF 10000
