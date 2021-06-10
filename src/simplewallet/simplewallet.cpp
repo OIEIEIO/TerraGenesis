@@ -6194,7 +6194,8 @@ void simple_wallet::check_for_inactivity_lock(bool user)
           "|                    (   )   Oooo.                    |" << std::endl <<
           "+---------------------\ (----(   )--------------------+" << std::endl <<
           "                       \_)    ) /" << std::endl <<
-          "                             (_/" << std::endl;""
+          "                             (_/" << std::endl <<
+          ""<< std::endl;
     }
     while (1)
     {
