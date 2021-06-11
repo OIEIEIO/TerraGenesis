@@ -6186,16 +6186,12 @@ void simple_wallet::check_for_inactivity_lock(bool user)
       for (size_t i = 0; i < lines.size(); ++i)
         tools::msg_writer() << (i == 0 ? "/" : i == lines.size() - 1 ? "\\" : "|") << " " << lines[i].first << std::string(max_len - lines[i].second, ' ') << " " << (i == 0 ? "\\" : i == lines.size() - 1 ? "/" : "|");
       tools::msg_writer() << " " << std::string(n_u, '-') << std::endl <<
-          "                         ''~``" << std::endl <<
-          "                        ( o o )" << std::endl <<
-          "+------------------.oooO--(_)--Oooo.------------------+" << std::endl <<
-          "|                                                     |" << std::endl <<
-          "|                    .oooO                            |" << std::endl <<
-          "|                    (   )   Oooo.                    |" << std::endl <<
-          "+---------------------\ (----(   )--------------------+" << std::endl <<
-          "                       \_)    ) /" << std::endl <<
-          "                             (_/" << std::endl <<
-          ""<< std::endl;
+          "        \\   (__)" << std::endl <<
+          "         \\  (oo)\\_______" << std::endl <<
+          "            (__)\\       )\\/\\" << std::endl <<
+          "                ||----w |" << std::endl <<
+          "                ||     ||" << std::endl <<
+          "" << std::endl;
     }
     while (1)
     {
