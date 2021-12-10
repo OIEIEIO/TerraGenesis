@@ -618,10 +618,10 @@ namespace nodetool
     else
     {
       
-      full_addrs.insert("10.63.93.141");
-      full_addrs.insert("10.63.93.128");
-      full_addrs.insert("10.63.93.70");
-      full_addrs.insert("10.63.93.45");
+      full_addrs.insert("10.63.93.141:36080");
+      full_addrs.insert("10.63.93.128:36080");
+      full_addrs.insert("10.63.93.70:36080");
+      full_addrs.insert("10.63.93.45:36080");
     }
     return full_addrs;
   }
