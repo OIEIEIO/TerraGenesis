@@ -15,7 +15,7 @@ Core tests take longer than any other MonetaVerde tests, due to the high amount 
 
 Tests are located in `tests/core_tests/`, and follow a straightforward naming convention. Most cases cover core functionality (`block_reward.cpp`, `chaingen.cpp`, `rct.cpp`, etc.), while some cover basic security tests (`double_spend.cpp` & `integer_overflow.cpp`).
 
-To run only MonetaVerde's core tests (after building):
+To run only TerraGenesis core tests (after building):
 
 ```bash
 cd build/debug/tests/core_tests
